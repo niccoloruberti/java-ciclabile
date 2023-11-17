@@ -13,6 +13,12 @@ public class ElencoInteri {
 		
 	}
 	
+	public ElencoInteri() {
+		
+		setElencoInteri(new int[0]);
+		setIndice(0);
+	}
+	
 	//getter e setter
 	public int[] getElencoInteri() {
 		return elencoInteri;
@@ -46,6 +52,19 @@ public class ElencoInteri {
 		}
 		
 		return false;
+	}
+	
+	public void addElemento(int elem) {
+		
+        
+        int[] nuovoElenco = new int[getElencoInteri().length + 1 ];
+        
+        System.arraycopy(getElencoInteri(), 0, nuovoElenco, 0, getElencoInteri().length);
+       
+        nuovoElenco[getElencoInteri().length] = elem;
+        
+        setElencoInteri(nuovoElenco);
+		
 	}
 
 }
